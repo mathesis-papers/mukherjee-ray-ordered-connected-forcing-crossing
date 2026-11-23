@@ -28,9 +28,9 @@
         "name": "Wenlin Zhang"
       }
     ],
-    "concept_doi": null,
+    "concept_doi": "10.5281/zenodo.24477546",
     "current_version": 2,
-    "doi": null,
+    "doi": "10.5281/zenodo.24477547",
     "lean_source": {
       "revision": "a165df4cad5a5538260a4e40d6b865a3db48795d",
       "url": "https://github.com/the-omega-institute/trureturing/blob/a165df4cad5a5538260a4e40d6b865a3db48795d/D5/S3/Combinatorics/Graph/ZeroForcing/ConnectedForcingCrossingRefutation.lean"
