@@ -1,0 +1,66 @@
+{
+  "files": {
+    "pdf": {
+      "bytes": 74733,
+      "matches_public": true,
+      "path": "paper.pdf",
+      "public_sha256": "d7c9a7a787e695bb119531e65ab718472b5e0549af6f4062ab1f0fe07614ae3b",
+      "sha256": "d7c9a7a787e695bb119531e65ab718472b5e0549af6f4062ab1f0fe07614ae3b"
+    },
+    "source": {
+      "bytes": 16531,
+      "matches_public": true,
+      "path": "source.archive",
+      "public_sha256": "b9b4d3e71fb8b15f6018092a678047a647f2fa2fdeb466c2b3048a7f492d5e2b",
+      "sha256": "b9b4d3e71fb8b15f6018092a678047a647f2fa2fdeb466c2b3048a7f492d5e2b"
+    }
+  },
+  "source_identity": "Mathesis public projection",
+  "work": {
+    "abstract_text": "Using Brimkov's earlier starlike enumeration (May 2017, Proposition 7.11), we answer Mukherjee and Ray's Problem 5.3 in On the connected zero forcing polynomial of finite trees, arXiv:2611.10985v1 (2026), Section 5, p. 21, negatively even for two three-leaf trees and even when their order may be exchanged. For every n at least 10 we construct such a pair: its coefficient differences at sizes 4, 6, n-2 are -2, 1, -1, so neither order admits the requested single crossing. The construction follows from an explicit enumeration of connected forcing sets in a three-armed tree. We also explain the smaller, ordered path-star obstruction from the posers' own examples. For the neighboring unicyclic problem, a complete five-vertex classification shows that a fixed-leaf class can have neither a least nor a greatest polynomial.",
+    "authors": [
+      {
+        "affiliation": "ChronoAI Pte Ltd, Singapore",
+        "name": "Haobo Ma"
+      },
+      {
+        "affiliation": "National University of Singapore; ChronoAI Pte Ltd, Singapore",
+        "name": "Wenlin Zhang"
+      }
+    ],
+    "concept_doi": null,
+    "current_version": 2,
+    "doi": null,
+    "lean_source": {
+      "revision": "a165df4cad5a5538260a4e40d6b865a3db48795d",
+      "url": "https://github.com/the-omega-institute/trureturing/blob/a165df4cad5a5538260a4e40d6b865a3db48795d/D5/S3/Combinatorics/Graph/ZeroForcing/ConnectedForcingCrossingRefutation.lean"
+    },
+    "license": "CC-BY-4.0",
+    "msc": [],
+    "pdf": {
+      "bytes": 74733,
+      "sha256": "d7c9a7a787e695bb119531e65ab718472b5e0549af6f4062ab1f0fe07614ae3b",
+      "url": "/api/v1/collected-papers/mukherjee-ray-ordered-connected-forcing-crossing/files/pdf?version=2"
+    },
+    "previous_version": null,
+    "publication": "public",
+    "published_on": "2026-11-23T18:34:40.166400392Z",
+    "record": "mukherjee-ray-ordered-connected-forcing-crossing",
+    "repository_name": "mukherjee-ray-ordered-connected-forcing-crossing",
+    "source": {
+      "bytes": 16531,
+      "sha256": "b9b4d3e71fb8b15f6018092a678047a647f2fa2fdeb466c2b3048a7f492d5e2b",
+      "url": "/api/v1/collected-papers/mukherjee-ray-ordered-connected-forcing-crossing/files/source?version=2"
+    },
+    "title": "Three-leaf counterexamples to Mukherjee and Ray's connected-forcing crossing question",
+    "versions": [
+      {
+        "previous_version": null,
+        "published_on": "2026-11-23T18:34:40.166400392Z",
+        "revision": "2",
+        "version": 2
+      }
+    ],
+    "work": "mukherjee-ray-ordered-connected-forcing-crossing"
+  }
+}

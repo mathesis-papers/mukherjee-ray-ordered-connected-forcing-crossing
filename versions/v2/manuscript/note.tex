@@ -1,0 +1,344 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm,booktabs,array}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[colorlinks=true,urlcolor=blue,citecolor=blue,linkcolor=blue]{hyperref}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\newcommand{\ZC}{Z_C}
+\title{Three-leaf counterexamples to Mukherjee and Ray's connected-forcing crossing question}
+\author{Haobo Ma\\\small ChronoAI Pte Ltd, Singapore
+\and Wenlin Zhang\\\small National University of Singapore\\\small ChronoAI Pte Ltd, Singapore}
+\date{20 November 2026}
+\begin{document}
+\maketitle
+\begin{abstract}
+\begin{sloppypar}
+Using Brimkov's earlier starlike enumeration (May 2017, Proposition 7.11),
+we answer Mukherjee and Ray's Problem 5.3 in \emph{On the connected zero forcing polynomial of finite
+trees}, arXiv:2611.10985v1 (2026), Section 5, p.~21, negatively even for
+two three-leaf trees and even when their order may be exchanged.
+For every $n\geq10$ we construct such a pair: its coefficient differences
+at sizes $4,6,n-2$ are $-2,1,-1$, so neither order admits the requested
+single crossing. The construction follows from an explicit enumeration
+of connected forcing sets in a three-armed tree. We also explain the
+smaller, ordered path--star obstruction from the posers' own examples.
+For the neighboring unicyclic problem, a complete five-vertex classification
+shows that a fixed-leaf class can have neither a least nor a greatest polynomial.
+\end{sloppypar}
+\end{abstract}
+
+\section{Failure in both orders with three leaves}
+Mukherjee and Ray ask whether the connected zero forcing coefficient
+sequences of two equally large trees always cross in a prescribed
+direction~\cite[Problem 5.3]{MR}. The answer remains negative if the trees
+must have the same number of leaves and either order may be chosen.
+Three-armed trees already give an obstruction at every order at least ten.
+
+All graphs are finite, simple and undirected. A colored vertex with exactly
+one uncolored neighbor forces that neighbor to become colored. A set $S$
+is a \emph{connected zero forcing set} if its successive forces color the
+whole graph and the initially induced subgraph $G[S]$ is connected.
+This is the convention in~\cite{BD}; singletons are connected.
+Write $\ZC(G,i)$ for the number of these sets of size $i$ and
+$\ZC^G(x)=\sum_{i=1}^{|V(G)|}\ZC(G,i)x^i$.
+For two trees $T_1,T_2$ on $n$ vertices, the requested cutoff is an integer
+$\ell$ with $1\leq\ell\leq n$ such that
+\begin{align}
+\ZC(T_1,i)&\leq\ZC(T_2,i) &&(1\leq i\leq\ell),\label{eq:low}\\
+\ZC(T_1,i)&\geq\ZC(T_2,i) &&(\ell<i\leq n).\label{eq:high}
+\end{align}
+The source allows different leaf counts; equal counts are also admissible.
+The possibility of exchanging the order is a strengthening considered here,
+not a separate assertion made by the source.
+
+Let $S_{h_1,\ldots,h_k}$ be the tree consisting of a center and $k$ arms,
+each a path of $h_j$ edges, with distinct arms meeting only at the center.
+Put $F_h(x)=1+x+\cdots+x^{h-1}$ for $h\geq1$.
+
+\begin{theorem}\label{thm:main}
+Let $a,b\geq4$ be integers, $n=a+b+2$, and
+\[
+A=S_{1,a,b},\qquad B=S_{2,2,a+b-3}.
+\]
+Both trees have $n$ vertices and three leaves. If
+$d_i=\ZC(A,i)-\ZC(B,i)$, then
+\[
+d_4=-2,\qquad d_6=1,\qquad d_{n-2}=-1.
+\]
+Neither $(A,B)$ nor $(B,A)$ has a cutoff satisfying
+\eqref{eq:low}--\eqref{eq:high}.
+\end{theorem}
+
+We use Brimkov's enumeration of spiders
+\cite[Proposition 7.11, pp.~168--169]{B}, later expressed polynomially by
+Mukherjee and Ray~\cite[Lemma 3.3, p.~5]{MR}.
+We include the elementary counting proof.
+\begin{lemma}\label{lem:enumeration}
+For $k\geq3$ and positive arm lengths $h_1,\ldots,h_k$,
+\[
+\ZC^{S_{h_1,\ldots,h_k}}(x)
+=x^k\left(x\prod_{j=1}^k F_{h_j}(x)
++\sum_{j=1}^k\prod_{t\ne j}F_{h_t}(x)\right).
+\]
+\end{lemma}
+\begin{proof}
+A connected set avoiding the center lies in one arm. Even if it colors
+that entire arm and then the center, the center still has at least two
+uncolored arms and cannot force further. Thus every connected forcing set
+contains the center. Its intersection with each arm is an initial segment
+of length $r_j$, where $0\leq r_j\leq h_j$.
+If two or more segments are empty, the center can never start either
+empty arm. If at most one is empty, each nonempty segment extends along
+its arm; the center then starts the one remaining arm, if present.
+These conditions are necessary and sufficient.
+
+Write $L_h=x+\cdots+x^h=xF_h$. Counting the center and either no empty
+arm or one specified empty arm gives
+$x(\prod_j L_{h_j}+\sum_j\prod_{t\ne j}L_{h_t})$.
+Factoring the powers of $x$ yields the formula.
+\end{proof}
+
+\begin{proof}[Proof of Theorem~\ref{thm:main}]
+The vertex counts are $1+1+a+b=1+2+2+(a+b-3)=n$.
+Lemma~\ref{lem:enumeration} gives
+\begin{align}
+x^{-3}\ZC^A(x)&=F_a+F_b+(1+x)F_aF_b,\label{eq:A}\\
+x^{-3}\ZC^B(x)&=(1+x)^2+(2+3x+2x^2+x^3)F_{a+b-3}.\label{eq:B}
+\end{align}
+Since $a,b\geq4$, the coefficients of $F_aF_b$ at degrees $0,1,2,3$
+are $1,2,3,4$. Thus the coefficients at degree $1$ in
+\eqref{eq:A} and \eqref{eq:B} are respectively $2+2+1=5$ and
+$2+2+3=7$; those at degree $3$ are $2+4+3=9$ and $2+3+2+1=8$.
+Here $F_{a+b-3}$ has coefficient one through degree $3$.
+These calculations give $d_4=-2$ and $d_6=1$.
+
+At degree $a+b-3$, the terms $F_a+F_b$ contribute zero.
+The two highest diagonals needed from $F_aF_b$ have coefficients
+$[x^{a+b-3}]F_aF_b=2$ and $[x^{a+b-4}]F_aF_b=3$.
+Consequently \eqref{eq:A} has coefficient $5$ there.
+The degree of $F_{a+b-3}$ is $a+b-4$, so in \eqref{eq:B} exactly
+the multiplier terms of degrees $1,2,3$ contribute, giving $3+2+1=6$.
+This proves $d_{n-2}=-1$.
+
+For $(A,B)$, $d_6>0$ requires $\ell<6$, whereas $d_{n-2}<0$
+requires $\ell\geq n-2\geq8$, a contradiction.
+For $(B,A)$, $-d_4>0$ requires $\ell<4$, whereas $-d_6<0$
+requires $\ell\geq6$. This is again impossible.
+\end{proof}
+
+\begin{corollary}\label{cor:allorders}
+For every $n\geq10$, two $n$-vertex trees with three leaves fail the
+crossing condition in both orders. At $n=10$ one may take
+$A=S_{1,4,4}$ and $B=S_{2,2,5}$, with
+\begin{align*}
+\ZC^A(x)&=3x^3+5x^4+7x^5+9x^6+7x^7+5x^8+3x^9+x^{10},\\
+\ZC^B(x)&=3x^3+7x^4+8x^5+8x^6+8x^7+6x^8+3x^9+x^{10}.
+\end{align*}
+\end{corollary}
+\begin{proof}
+Choose $a=4$ and $b=n-6$. The two displayed polynomials follow by
+substituting $a=b=4$ in \eqref{eq:A}--\eqref{eq:B}.
+\end{proof}
+The existence of a greatest three-leaf tree, proved in
+\cite[Corollary 4.12]{MR}, is compatible with this result:
+a common coefficientwise upper bound need not impose a single crossing
+on every pair below it.
+
+\section{The small ordered obstruction and elementary families}
+\begin{corollary}\label{prop:families}
+For the path $P_n$ ($n\geq2$), star $K_{1,n-1}$ ($n\geq4$), and
+cycle $C_n$ ($n\geq3$), respectively,
+\begin{align}
+\ZC^{P_n}(x)&=2x+\sum_{i=2}^n(n-i+1)x^i,\label{eq:path}\\
+\ZC^{K_{1,n-1}}(x)&=(n-1)x^{n-1}+x^n,\label{eq:star}\\
+\ZC^{C_n}(x)&=n\sum_{i=2}^{n-1}x^i+x^n.\label{eq:cycle}
+\end{align}
+For $p\geq3$, $n\geq p+1$, the starlike tree with $p-1$ unit arms
+and one arm of length $n-p$ has polynomial
+\begin{equation}
+\ZC^{S_{1,\ldots,1,n-p}}(x)=p\sum_{i=p}^{n-1}x^i+x^n.\label{eq:broom}
+\end{equation}
+More generally, $S_{h_1,\ldots,h_k}$, $k\geq3$, has connected forcing
+number $k$ and exactly $k$ minimum connected forcing sets.
+\end{corollary}
+The path and cycle formulas are Brimkov's Propositions 7.7 and 7.8~\cite{B};
+the star is a specialization of his Proposition 7.11.
+Equation~\eqref{eq:broom} is also Mukherjee and Ray's Corollary 3.8~\cite{MR}.
+The minimum-size count is already given by Brimkov and Davila's
+Theorem 13 and Corollary 14~\cite{BD}.
+\begin{proof}
+Connected subsets of a path are intervals. Every interval of size at least
+two forces from its boundaries; there are $n-i+1$ intervals of size $i$.
+Of the singleton sets, exactly the two endpoints force.
+
+In a star, a connected set of size at least two contains the center.
+It forces exactly when it omits at most one leaf. There are $n-1$ proper
+such sets, all of size $n-1$. A singleton cannot force: the center
+has at least three uncolored neighbors, and a leaf can color the center
+but leaves at least two other leaves uncolored. The smaller stars
+$K_{1,1}=P_2$ and $K_{1,2}=P_3$ have the path formulas.
+
+In a cycle, a singleton cannot force. A proper connected subset with at
+least two vertices is a cyclic interval and forces from its boundaries.
+For each size $2\leq i\leq n-1$ there are $n$ such intervals.
+The full set contributes $x^n$ in each case.
+
+For \eqref{eq:broom}, put $h=n-p$ in Lemma~\ref{lem:enumeration}.
+It gives $x^p((x+p-1)F_h+1)$, whose coefficients are $p$ at
+degrees $p,\ldots,n-1$ and one at degree $n$.
+For general positive arm lengths, the same lemma has smallest exponent
+$k$ and coefficient $k$, since each $F_{h_j}$ has constant term one.
+\end{proof}
+
+\begin{corollary}\label{cor:small}
+The smallest order of a counterexample to the literal ordered question
+is four. For every $n\geq4$, $(P_n,K_{1,n-1})$ has no cutoff, whereas
+the reversed pair has the unique cutoff $n-2$.
+\end{corollary}
+\begin{proof}
+The path-first singleton comparison would be $2\leq0$ for every
+permitted cutoff. In the reverse order the star coefficients are zero
+and the path coefficients positive through index $n-2$; at index
+$n-1$ they are $n-1>2$, and at $n$ they agree. Hence the unique
+reverse cutoff is $n-2$. At orders one, two and three there is just
+one tree up to isomorphism, so every pair has equal coefficient sequences.
+\end{proof}
+The two four-vertex polynomials are already printed by Mukherjee and
+Ray in Section 4, p.~7~\cite{MR}. Their example supplies the literal
+ordered obstruction. Theorem~\ref{thm:main} removes both dependence on
+the order and the difference in leaf counts.
+
+\section{The unicyclic extremal question}
+Problem 5.2~\cite[p.~21]{MR} asks both for unicyclic enumeration and for
+coefficientwise least and greatest graphs at fixed order and leaf count.
+The latter question has a negative answer already in a two-element class.
+
+\begin{corollary}\label{cor:unicyclic}
+Among connected simple unicyclic graphs with five vertices and two leaves,
+there is neither a coefficientwise least nor a coefficientwise greatest
+connected zero forcing polynomial.
+\end{corollary}
+The triangle with leaves at different vertices also appears in
+Brimkov's discussion of greedoids~\cite[Section 7.2, pp.~159--160]{B}.
+\begin{proof}
+The unique cycle has length three: a cycle of length four or five leaves
+too few vertices for two leaves. The other two vertices must both be
+leaves directly attached to the triangle, since a pendant path of length
+two would give just one leaf. Up to isomorphism there are exactly two
+graphs: the two leaves attach to the same triangle vertex or to different
+triangle vertices.
+
+Label the triangle $0,1,2$ and the leaves $3,4$.
+Let $U$ have additional edges $03,04$, and let $V$ have edges $03,14$.
+Neither graph has a forcing singleton. No edge-pair of $U$ forces:
+coloring along a leaf edge stalls at $0$, while a triangle edge can
+color the triangle but leaves both leaves uncolored. The forcing pairs
+of $V$ are exactly $\{0,2\}$ and $\{1,2\}$; the other three edges
+stall with two uncolored neighbors at each possible forcing vertex.
+For triples the complete lists are
+\begin{align*}
+U:&\quad \{0,1,3\},\{0,1,4\},\{0,2,3\},\{0,2,4\},\\
+V:&\quad \{0,1,2\},\{0,1,3\},\{0,1,4\},\{0,2,3\},\{1,2,4\}.
+\end{align*}
+For $U$, the other connected triples are the triangle and $\{0,3,4\}$;
+both stall with two uncolored neighbors at $0$. For $V$, the displayed
+list contains every connected triple, and each forces by filling the
+triangle and then its remaining leaves.
+
+A connected four-vertex subset forces the remaining vertex. There are
+four in $U$, obtained by omitting $1,2,3$ or $4$, and three in $V$,
+obtained by omitting $2,3$ or $4$. The full set always qualifies. Thus
+\[
+\ZC^U(x)=4x^3+4x^4+x^5,\qquad
+\ZC^V(x)=2x^2+5x^3+3x^4+x^5.
+\]
+At size two $V$ is larger; at size four $U$ is larger. Since these are
+the only isomorphism classes, no third member can be a common least
+or greatest. This proves the assertion about the entire class.
+\end{proof}
+
+\section{Source coverage and verification scope}
+The following table separates the source's questions and prior results
+from the consequences proved above.
+\begin{center}
+\small
+\begin{tabular}{@{}p{0.28\linewidth}p{0.65\linewidth}@{}}
+\toprule
+Source item in~\cite{MR} & Coverage\\
+\midrule
+Lemma 3.3, p.~5 & Reproved; prior proof Brimkov, 2017, Proposition 7.11;
+later polynomial form Mukherjee--Ray, 2026.\\
+Corollaries 3.6, 3.8 & Starlike minimum count and one-long-arm formula
+reproved in Corollary~\ref{prop:families}; prior proofs
+Brimkov--Davila, 2016, and Mukherjee--Ray, 2026, respectively.\\
+Section 4 examples, p.~7 & Path--star polynomials reproved;
+prior formulas Brimkov, 2017; later examples Mukherjee--Ray, 2026.\\
+Corollary 4.12, p.~15 & Prior proof cited; greatest three-leaf tree.
+Its existence does not prevent Theorem~\ref{thm:main}.\\
+Conjecture 5.1, p.~20 & Not covered: eventual absence of a greatest
+tree with a fixed leaf count $p\geq5$.\\
+Problem 5.2, p.~21 & Extremal clause answered: no, by
+Corollary~\ref{cor:unicyclic}. Cycle formula reproved; prior proof
+Brimkov, 2017, Proposition 7.8. General enumeration not covered.\\
+Problem 5.3, p.~21 & Answered: no. Theorem~\ref{thm:main} gives
+equal-leaf counterexamples in both orders; Corollary~\ref{cor:small}
+gives the smallest literal ordered example.\\
+Order exchange variant & Not posed separately in the source;
+obstruction proved by Theorem~\ref{thm:main}.\\
+Problem 5.4, p.~21 & Partial coverage: the displayed tree and cycle
+families and comparisons; arbitrary-graph enumeration not covered.\\
+\bottomrule
+\end{tabular}
+\end{center}
+Newton and Brimkov's non-unimodality theorem for connected forcing
+polynomials on general graphs~\cite[Corollary 2]{NB} concerns one
+coefficient sequence, rather than crossings between two tree sequences.
+Their Questions 1--3 concern ordinary zero forcing polynomials and are
+not settled by these connected-forcing counts.
+
+\paragraph{Mathematical verification.}
+The declaration \texttt{result : $\neg$ claim} in the
+\href{https://github.com/the-omega-institute/trureturing/blob/a165df4cad5a5538260a4e40d6b865a3db48795d/D5/S3/Combinatorics/Graph/ZeroForcing/ConnectedForcingCrossingRefutation.lean}{pinned Lean source}
+negates the full ordered assertion for arbitrary finite vertex types,
+using the four-vertex path and star. It covers the literal negative answer
+in Corollary~\ref{cor:small}. The imported
+\href{https://github.com/the-omega-institute/trureturing/blob/a165df4cad5a5538260a4e40d6b865a3db48795d/D5/S3/Combinatorics/GeneralizedPetersen/ZeroForcingThree.lean}{\texttt{IsZeroForcing}}
+defines ordinary forcing via \texttt{Black.init} and \texttt{Black.force}.
+The three-leaf and unicyclic obstructions, the enumeration,
+all-order formulas, reverse cutoff, and minimality have the written proofs
+above. The accompanying \texttt{verify.py} independently enumerates every
+vertex subset of the displayed three-leaf pairs at orders $10$ through
+$14$, paths and stars at orders $2$ through $10$, and cycles at orders
+$3$ through $10$. It also checks all labeled trees of orders $1$ through
+$4$ and the polynomial identities for every $4\leq a\leq b\leq30$.
+It exhausts all $1{,}024$ labeled simple graphs of order five, identifies
+all $90$ unicyclic two-leaf graphs and their two isomorphism classes,
+and tests all $2{,}880$ initial subsets in that class.
+These are finite checks, separate from the all-parameter proofs.
+
+\begin{thebibliography}{9}\small
+\bibitem{MR} S. Mukherjee and P. Ray,
+\emph{On the connected zero forcing polynomial of finite trees},
+arXiv:2611.10985v1 (7 November 2026), Lemma 3.3 and Sections 4--5.
+\href{https://arxiv.org/abs/2611.10985v1}{arXiv record}.
+\bibitem{B} B. Brimkov, \emph{Graph Coloring, Zero Forcing, and Related
+Problems}, Ph.D. thesis, Rice University (May 2017), Chapter 7,
+Propositions 7.7, 7.8 and 7.11, pp.~165--169.
+\href{https://repository.rice.edu/server/api/core/bitstreams/c29c77d5-534a-4c5d-bd83-09121784af53/content}{Rice University text}.
+\bibitem{BD} B. Brimkov and R. Davila,
+\emph{Characterizations of the Connected Forcing Number of a Graph},
+arXiv:1604.00740v1 (4 April 2016), Section 1, Theorem 13 and Corollary 14.
+\href{https://arxiv.org/abs/1604.00740v1}{arXiv record}.
+\bibitem{NB} T. Newton and B. Brimkov,
+\emph{Zero forcing is not unimodal}, arXiv:2611.11352v1
+(8 November 2026), Corollary 2 and Section 3.
+\href{https://arxiv.org/abs/2611.11352v1}{arXiv record}.
+\end{thebibliography}
+\smallskip
+\noindent\small Copyright 2026 Haobo Ma and Wenlin Zhang.
+Licensed under Creative Commons Attribution 4.0 International (CC BY 4.0).
+\end{document}

@@ -1,0 +1,238 @@
+{
+  "nodes": [
+    {
+      "attribution": null,
+      "authors": [
+        {
+          "affiliation": "ChronoAI Pte Ltd, Singapore",
+          "name": "Haobo Ma"
+        },
+        {
+          "affiliation": "National University of Singapore; ChronoAI Pte Ltd, Singapore",
+          "name": "Wenlin Zhang"
+        }
+      ],
+      "claim": "s1",
+      "contributor": null,
+      "identity": "collected:mukherjee-ray-ordered-connected-forcing-crossing:2:s1",
+      "kind": "paper",
+      "label": "Theorem",
+      "lean_source": {
+        "revision": "a165df4cad5a5538260a4e40d6b865a3db48795d",
+        "url": "https://github.com/the-omega-institute/trureturing/blob/a165df4cad5a5538260a4e40d6b865a3db48795d/D5/S3/Combinatorics/Graph/ZeroForcing/ConnectedForcingCrossingRefutation.lean"
+      },
+      "lineage": "collected:mukherjee-ray-ordered-connected-forcing-crossing:s1",
+      "macros": {
+        "\\ZC": "Z_C"
+      },
+      "next_step": "Existing Lean evidence is being checked before new proof work.",
+      "proof_basis": null,
+      "proof_state": "preparing",
+      "receipt": null,
+      "record": "mukherjee-ray-ordered-connected-forcing-crossing",
+      "scope": "in_scope",
+      "statement": "Let $a,b\\geq4$ be integers, $n=a+b+2$, and\n\\[\nA=S_{1,a,b},\\qquad B=S_{2,2,a+b-3}.\n\\]\nBoth trees have $n$ vertices and three leaves. If\n$d_i=\\ZC(A,i)-\\ZC(B,i)$, then\n\\[\nd_4=-2,\\qquad d_6=1,\\qquad d_{n-2}=-1.\n\\]\nNeither $(A,B)$ nor $(B,A)$ has a cutoff satisfying\n\\eqref{eq:low}--\\eqref{eq:high}.",
+      "status": "preparing",
+      "target_digest": null,
+      "title": "Three-leaf counterexamples to Mukherjee and Ray's connected-forcing crossing question",
+      "toolchain": null,
+      "version": 2,
+      "work": "mukherjee-ray-ordered-connected-forcing-crossing"
+    },
+    {
+      "attribution": null,
+      "authors": [
+        {
+          "affiliation": "ChronoAI Pte Ltd, Singapore",
+          "name": "Haobo Ma"
+        },
+        {
+          "affiliation": "National University of Singapore; ChronoAI Pte Ltd, Singapore",
+          "name": "Wenlin Zhang"
+        }
+      ],
+      "claim": "s2",
+      "contributor": null,
+      "identity": "collected:mukherjee-ray-ordered-connected-forcing-crossing:2:s2",
+      "kind": "paper",
+      "label": "Lemma",
+      "lean_source": {
+        "revision": "a165df4cad5a5538260a4e40d6b865a3db48795d",
+        "url": "https://github.com/the-omega-institute/trureturing/blob/a165df4cad5a5538260a4e40d6b865a3db48795d/D5/S3/Combinatorics/Graph/ZeroForcing/ConnectedForcingCrossingRefutation.lean"
+      },
+      "lineage": "collected:mukherjee-ray-ordered-connected-forcing-crossing:s2",
+      "macros": {
+        "\\ZC": "Z_C"
+      },
+      "next_step": "Existing Lean evidence is being checked before new proof work.",
+      "proof_basis": null,
+      "proof_state": "preparing",
+      "receipt": null,
+      "record": "mukherjee-ray-ordered-connected-forcing-crossing",
+      "scope": "in_scope",
+      "statement": "For $k\\geq3$ and positive arm lengths $h_1,\\ldots,h_k$,\n\\[\n\\ZC^{S_{h_1,\\ldots,h_k}}(x)\n=x^k\\left(x\\prod_{j=1}^k F_{h_j}(x)\n+\\sum_{j=1}^k\\prod_{t\\ne j}F_{h_t}(x)\\right).\n\\]",
+      "status": "preparing",
+      "target_digest": null,
+      "title": "Three-leaf counterexamples to Mukherjee and Ray's connected-forcing crossing question",
+      "toolchain": null,
+      "version": 2,
+      "work": "mukherjee-ray-ordered-connected-forcing-crossing"
+    },
+    {
+      "attribution": null,
+      "authors": [
+        {
+          "affiliation": "ChronoAI Pte Ltd, Singapore",
+          "name": "Haobo Ma"
+        },
+        {
+          "affiliation": "National University of Singapore; ChronoAI Pte Ltd, Singapore",
+          "name": "Wenlin Zhang"
+        }
+      ],
+      "claim": "s3",
+      "contributor": null,
+      "identity": "collected:mukherjee-ray-ordered-connected-forcing-crossing:2:s3",
+      "kind": "paper",
+      "label": "Corollary",
+      "lean_source": {
+        "revision": "a165df4cad5a5538260a4e40d6b865a3db48795d",
+        "url": "https://github.com/the-omega-institute/trureturing/blob/a165df4cad5a5538260a4e40d6b865a3db48795d/D5/S3/Combinatorics/Graph/ZeroForcing/ConnectedForcingCrossingRefutation.lean"
+      },
+      "lineage": "collected:mukherjee-ray-ordered-connected-forcing-crossing:s3",
+      "macros": {
+        "\\ZC": "Z_C"
+      },
+      "next_step": "Existing Lean evidence is being checked before new proof work.",
+      "proof_basis": null,
+      "proof_state": "preparing",
+      "receipt": null,
+      "record": "mukherjee-ray-ordered-connected-forcing-crossing",
+      "scope": "in_scope",
+      "statement": "For every $n\\geq10$, two $n$-vertex trees with three leaves fail the\ncrossing condition in both orders. At $n=10$ one may take\n$A=S_{1,4,4}$ and $B=S_{2,2,5}$, with\n\\begin{align*}\n\\ZC^A(x)&=3x^3+5x^4+7x^5+9x^6+7x^7+5x^8+3x^9+x^{10},\\\\\n\\ZC^B(x)&=3x^3+7x^4+8x^5+8x^6+8x^7+6x^8+3x^9+x^{10}.\n\\end{align*}",
+      "status": "preparing",
+      "target_digest": null,
+      "title": "Three-leaf counterexamples to Mukherjee and Ray's connected-forcing crossing question",
+      "toolchain": null,
+      "version": 2,
+      "work": "mukherjee-ray-ordered-connected-forcing-crossing"
+    },
+    {
+      "attribution": null,
+      "authors": [
+        {
+          "affiliation": "ChronoAI Pte Ltd, Singapore",
+          "name": "Haobo Ma"
+        },
+        {
+          "affiliation": "National University of Singapore; ChronoAI Pte Ltd, Singapore",
+          "name": "Wenlin Zhang"
+        }
+      ],
+      "claim": "s4",
+      "contributor": null,
+      "identity": "collected:mukherjee-ray-ordered-connected-forcing-crossing:2:s4",
+      "kind": "paper",
+      "label": "Corollary",
+      "lean_source": {
+        "revision": "a165df4cad5a5538260a4e40d6b865a3db48795d",
+        "url": "https://github.com/the-omega-institute/trureturing/blob/a165df4cad5a5538260a4e40d6b865a3db48795d/D5/S3/Combinatorics/Graph/ZeroForcing/ConnectedForcingCrossingRefutation.lean"
+      },
+      "lineage": "collected:mukherjee-ray-ordered-connected-forcing-crossing:s4",
+      "macros": {
+        "\\ZC": "Z_C"
+      },
+      "next_step": "Existing Lean evidence is being checked before new proof work.",
+      "proof_basis": null,
+      "proof_state": "preparing",
+      "receipt": null,
+      "record": "mukherjee-ray-ordered-connected-forcing-crossing",
+      "scope": "in_scope",
+      "statement": "For the path $P_n$ ($n\\geq2$), star $K_{1,n-1}$ ($n\\geq4$), and\ncycle $C_n$ ($n\\geq3$), respectively,\n\\begin{align}\n\\ZC^{P_n}(x)&=2x+\\sum_{i=2}^n(n-i+1)x^i,\\\\\n\\ZC^{K_{1,n-1}}(x)&=(n-1)x^{n-1}+x^n,\\\\\n\\ZC^{C_n}(x)&=n\\sum_{i=2}^{n-1}x^i+x^n.\n\\end{align}\nFor $p\\geq3$, $n\\geq p+1$, the starlike tree with $p-1$ unit arms\nand one arm of length $n-p$ has polynomial\n\\begin{equation}\n\\ZC^{S_{1,\\ldots,1,n-p}}(x)=p\\sum_{i=p}^{n-1}x^i+x^n.\n\\end{equation}\nMore generally, $S_{h_1,\\ldots,h_k}$, $k\\geq3$, has connected forcing\nnumber $k$ and exactly $k$ minimum connected forcing sets.",
+      "status": "preparing",
+      "target_digest": null,
+      "title": "Three-leaf counterexamples to Mukherjee and Ray's connected-forcing crossing question",
+      "toolchain": null,
+      "version": 2,
+      "work": "mukherjee-ray-ordered-connected-forcing-crossing"
+    },
+    {
+      "attribution": null,
+      "authors": [
+        {
+          "affiliation": "ChronoAI Pte Ltd, Singapore",
+          "name": "Haobo Ma"
+        },
+        {
+          "affiliation": "National University of Singapore; ChronoAI Pte Ltd, Singapore",
+          "name": "Wenlin Zhang"
+        }
+      ],
+      "claim": "s5",
+      "contributor": null,
+      "identity": "collected:mukherjee-ray-ordered-connected-forcing-crossing:2:s5",
+      "kind": "paper",
+      "label": "Corollary",
+      "lean_source": {
+        "revision": "a165df4cad5a5538260a4e40d6b865a3db48795d",
+        "url": "https://github.com/the-omega-institute/trureturing/blob/a165df4cad5a5538260a4e40d6b865a3db48795d/D5/S3/Combinatorics/Graph/ZeroForcing/ConnectedForcingCrossingRefutation.lean"
+      },
+      "lineage": "collected:mukherjee-ray-ordered-connected-forcing-crossing:s5",
+      "macros": {
+        "\\ZC": "Z_C"
+      },
+      "next_step": "Existing Lean evidence is being checked before new proof work.",
+      "proof_basis": null,
+      "proof_state": "preparing",
+      "receipt": null,
+      "record": "mukherjee-ray-ordered-connected-forcing-crossing",
+      "scope": "in_scope",
+      "statement": "The smallest order of a counterexample to the literal ordered question\nis four. For every $n\\geq4$, $(P_n,K_{1,n-1})$ has no cutoff, whereas\nthe reversed pair has the unique cutoff $n-2$.",
+      "status": "preparing",
+      "target_digest": null,
+      "title": "Three-leaf counterexamples to Mukherjee and Ray's connected-forcing crossing question",
+      "toolchain": null,
+      "version": 2,
+      "work": "mukherjee-ray-ordered-connected-forcing-crossing"
+    },
+    {
+      "attribution": null,
+      "authors": [
+        {
+          "affiliation": "ChronoAI Pte Ltd, Singapore",
+          "name": "Haobo Ma"
+        },
+        {
+          "affiliation": "National University of Singapore; ChronoAI Pte Ltd, Singapore",
+          "name": "Wenlin Zhang"
+        }
+      ],
+      "claim": "s6",
+      "contributor": null,
+      "identity": "collected:mukherjee-ray-ordered-connected-forcing-crossing:2:s6",
+      "kind": "paper",
+      "label": "Corollary",
+      "lean_source": {
+        "revision": "a165df4cad5a5538260a4e40d6b865a3db48795d",
+        "url": "https://github.com/the-omega-institute/trureturing/blob/a165df4cad5a5538260a4e40d6b865a3db48795d/D5/S3/Combinatorics/Graph/ZeroForcing/ConnectedForcingCrossingRefutation.lean"
+      },
+      "lineage": "collected:mukherjee-ray-ordered-connected-forcing-crossing:s6",
+      "macros": {
+        "\\ZC": "Z_C"
+      },
+      "next_step": "Existing Lean evidence is being checked before new proof work.",
+      "proof_basis": null,
+      "proof_state": "preparing",
+      "receipt": null,
+      "record": "mukherjee-ray-ordered-connected-forcing-crossing",
+      "scope": "in_scope",
+      "statement": "Among connected simple unicyclic graphs with five vertices and two leaves,\nthere is neither a coefficientwise least nor a coefficientwise greatest\nconnected zero forcing polynomial.",
+      "status": "preparing",
+      "target_digest": null,
+      "title": "Three-leaf counterexamples to Mukherjee and Ray's connected-forcing crossing question",
+      "toolchain": null,
+      "version": 2,
+      "work": "mukherjee-ray-ordered-connected-forcing-crossing"
+    }
+  ]
+}

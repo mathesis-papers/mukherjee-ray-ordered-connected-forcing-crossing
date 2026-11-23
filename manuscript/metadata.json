@@ -1,0 +1,15 @@
+{
+  "id": "mukherjee-ray-ordered-connected-forcing-crossing",
+  "revision": 2,
+  "problem_ids": ["mukherjee-ray-2026-ordered-connected-forcing-crossing"],
+  "topic": "Single crossings of connected zero forcing coefficients and unicyclic extrema",
+  "title": "Three-leaf counterexamples to Mukherjee and Ray's connected-forcing crossing question",
+  "creators": [
+    {"name": "Ma, Haobo", "affiliation": "ChronoAI Pte Ltd, Singapore"},
+    {"name": "Zhang, Wenlin", "affiliation": "National University of Singapore; ChronoAI Pte Ltd, Singapore"}
+  ],
+  "abstract": "Using Brimkov's earlier starlike enumeration (May 2017, Proposition 7.11), we answer Mukherjee and Ray's Problem 5.3 in On the connected zero forcing polynomial of finite trees, arXiv:2611.10985v1 (2026), Section 5, p. 21, negatively even for two three-leaf trees and even when their order may be exchanged. For every n at least 10 we construct such a pair: its coefficient differences at sizes 4, 6, n-2 are -2, 1, -1, so neither order admits the requested single crossing. The construction follows from an explicit enumeration of connected forcing sets in a three-armed tree. We also explain the smaller, ordered path-star obstruction from the posers' own examples. For the neighboring unicyclic problem, a complete five-vertex classification shows that a fixed-leaf class can have neither a least nor a greatest polynomial.",
+  "summary": "For every a,b at least 4, the trees S_(1,a,b) and S_(2,2,a+b-3), of common order a+b+2 and three leaves, admit no prescribed cutoff in either ordering. The note credits and reproves earlier enumeration formulas. It also classifies the two five-vertex unicyclic two-leaf graphs and proves the absence of common coefficientwise extrema. The pinned Lean declaration covers the literal ordered negative answer using the four-vertex path and star; the stronger families and classification have complete written proofs and bounded exact computations.",
+  "license": "cc-by-4.0",
+  "evidence_url": "https://github.com/the-omega-institute/trureturing/blob/a165df4cad5a5538260a4e40d6b865a3db48795d/D5/S3/Combinatorics/Graph/ZeroForcing/ConnectedForcingCrossingRefutation.lean"
+}
